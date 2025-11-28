@@ -1,7 +1,7 @@
-import app from './app.js';
-import { connectDb } from './config/db.js';
-import { env } from './config/env.js';
-import { ensureDefaultAdmin } from './services/adminService.js';
+import app from './src/app.js';
+import { connectDb } from './src/config/db.js';
+import { env } from './src/config/env.js';
+import { ensureDefaultAdmin } from './src/services/adminService.js';
 
 await connectDb();
 await ensureDefaultAdmin();
@@ -13,4 +13,3 @@ if (env.nodeEnv !== 'production') {
 }
 
 export default app;
-
